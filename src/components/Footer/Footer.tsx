@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const Footer = () => {
     return (
-        <footer className="md:mt-[20%] mt-[10%] pt-6">
+        <footer className="md:mt-[50%] mt-[40%] pt-6">
             <div className='flex justify-between text-sm'>
                 <div className='flex text-[#007aff]'>
                     <Image

@@ -6,8 +6,11 @@ import PasswordInput from '../PasswordInput/PasswordInput';
 import Footer from '../Footer/Footer';
 import LogoSection from '../LogoSection/LogoSection';
 import { LoginFormData } from '@/interfaces/LoginForm';
+import { useRouter } from "next/navigation";
+
 
 const LoginForm: React.FC = () => {
+    const router = useRouter();
     const [rememberMe, setRememberMe] = useState<boolean>(false)
     const [formData, setFormData] = useState<LoginFormData>({
         email: '',
@@ -26,14 +29,15 @@ const LoginForm: React.FC = () => {
             email: '',
             password: '',
         });
+        router.push("/Logged");
     };
 
     return (
-        <section className='md:w-[60%] w-[90%]'>
+        <section className='md:w-[60%] w-[90%] mt-3'>
             <section className="w-full max-w-md mx-auto space-y-6">
-                <div className='hidden md:block'>
+                <section className='hidden md:block'>
                     <LogoSection />
-                </div>
+                </section>
 
                 <h1 className="text-2xl font-bold">Nice to see you again</h1>
 
@@ -92,7 +96,7 @@ const LoginForm: React.FC = () => {
                         <div className="absolute inset-0 flex items-center">
                             <div className="w-full border-t border-gray-300"></div>
                         </div>
-                        <div className="relative flex justify-center text-sm">
+                        <div className="relative flex justify-center">
                             <span className="px-2 bg-white text-gray-500"></span>
                         </div>
                     </div>
@@ -113,9 +117,9 @@ const LoginForm: React.FC = () => {
 
                 </form>
 
-                <div className='flex justify-center md:hidden'>
+                <section className='flex justify-center md:hidden'>
                     <LogoSection />
-                </div>
+                </section>
             </section>
             <Footer />
         </section>
