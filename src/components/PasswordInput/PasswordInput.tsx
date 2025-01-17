@@ -1,13 +1,11 @@
+import { PasswordInputProps } from '@/interfaces/PasswordInput';
 import React, { useState } from 'react';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
-interface PasswordInputProps {
-  id: string;
-  placeholder: string;
-}
-
-const PasswordInput: React.FC<PasswordInputProps> = ({ id, placeholder }) => {
-  const [showPassword, setShowPassword] = useState(false);
+const PasswordInput: React.FC<PasswordInputProps> = ({
+  id, placeholder, value, required, name, onChange, 'aria-label': ariaLabel,
+}) => {
+  const [showPassword, setShowPassword] = useState<boolean>(false);
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
@@ -18,8 +16,13 @@ const PasswordInput: React.FC<PasswordInputProps> = ({ id, placeholder }) => {
       <input
         type={showPassword ? "text" : "password"}
         id={id}
-        className="w-full px-3 py-2 pr-10 border border-gray-300 rounded-md shadow-sm "
+        className="w-full px-3 py-2 pr-10 border bg-[#f2f2f2] rounded-md shadow-sm "
         placeholder={placeholder}
+        value={value}
+        name={name}
+        required={required}
+        onChange={onChange}
+        aria-label={ariaLabel}
       />
       <button
         type="button"
@@ -27,11 +30,14 @@ const PasswordInput: React.FC<PasswordInputProps> = ({ id, placeholder }) => {
         onClick={togglePasswordVisibility}
       >
         {showPassword ? (
-          <FaEyeSlash className="text-gray-500" />
+          <FaEyeSlash className="text-gray-600" />
         ) : (
-          <FaEye className="text-gray-500" />
+          <FaEye className="text-gray-600" />
         )}
       </button>
+      <span className="sr-only">
+        {showPassword ? "Password is visible" : "Password is hidden"}
+      </span>
     </div>
   );
 };

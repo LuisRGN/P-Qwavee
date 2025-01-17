@@ -1,27 +1,32 @@
 'use client'
 import React, { useState } from 'react'
-import Image from 'next/image'
 import Switch from '../Switch/Switch'
 import { FcGoogle } from "react-icons/fc";
 import PasswordInput from '../PasswordInput/PasswordInput';
 import Footer from '../Footer/Footer';
+import LogoSection from '../LogoSection/LogoSection';
+import { LoginFormData } from '@/interfaces/LoginForm';
 
-const LoginForm = () => {
+const LoginForm: React.FC = () => {
     const [rememberMe, setRememberMe] = useState<boolean>(false)
+    const [formData, setFormData] = useState<LoginFormData>({
+        email: '',
+        password: '',
+    });
 
-    const LogoSection = () => {
-        return (
-            <div className='flex items-center my-9 gap-1'>
-                <Image
-                    src='https://res.cloudinary.com/dtoditltb/image/upload/v1737067692/Imagen_de_WhatsApp_2025-01-16_a_las_17.44.53_3293ed02__1_-removebg-preview_ag1wvj.png'
-                    alt='ui-unicorn'
-                    width={40}
-                    height={40}
-                />
-                <span className="text-xl font-semibold">UI Unicorn</span>
-            </div>
-        )
-    }
+    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        console.log('Form submitted:', formData);
+
+        setFormData({
+            email: '',
+            password: '',
+        });
+    };
 
     return (
         <section className='md:w-[60%] w-[90%]'>
@@ -29,24 +34,57 @@ const LoginForm = () => {
                 <div className='hidden md:block'>
                     <LogoSection />
                 </div>
-                <h2 className="text-2xl font-bold">Nice to see you again</h2>
-                <form className="space-y-4">
-                    <div className="space-y-2">
-                        <label htmlFor="login" className="hidden md:block text-sm font-medium text-gray-700">Login</label>
-                        <input type="text" id="login" className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm" placeholder="Email" />
-                    </div>
-                    <div className="space-y-2">
-                        <label htmlFor="password" className="hidden md:block text-sm font-medium text-gray-700">Password</label>
-                        <PasswordInput id="password" placeholder="Enter password" />
-                    </div>
+
+                <h1 className="text-2xl font-bold">Nice to see you again</h1>
+
+                <form className="space-y-4" onSubmit={handleSubmit}>
+                    <fieldset className='p-0'>
+                        <legend className="sr-only">Login credentials</legend>
+
+                        <div className="space-y-2">
+                            <label htmlFor="login" className="hidden md:block text-sm font-medium text-gray-700">Login</label>
+                            <input
+                                className="w-full px-3 py-2 border bg-[#f2f2f2] rounded-md shadow-sm"
+                                type="text"
+                                name="email" id="login"
+                                placeholder="Email"
+                                required
+                                onChange={handleInputChange}
+                                value={formData.email}
+                                aria-label="Email address" />
+                        </div>
+
+                        <div className="space-y-2">
+                            <label htmlFor="password" className="hidden md:block text-sm font-medium text-gray-700">Password</label>
+                            <PasswordInput
+                                id="password"
+                                placeholder="Enter password"
+                                name="password"
+                                required
+                                onChange={handleInputChange}
+                                value={formData.password}
+                                aria-label="Password" />
+                        </div>
+
+                    </fieldset>
+
                     <div className='flex justify-between items-center'>
                         <div className="flex items-center space-x-2">
                             <Switch checked={rememberMe} onChange={() => setRememberMe(!rememberMe)} />
-                            <label htmlFor="remember" className="text-sm text-gray-700">Remember me</label>
+                            <label
+                                htmlFor="remember"
+                                className="text-sm text-gray-700"
+                                aria-label="Remember me">Remember me</label>
                         </div>
-                        <a href="#" className="text-sm text-[#007aff] hover:text-[#005eff]">Forgot password?</a>
+                        <a
+                            href="#"
+                            className="text-sm text-[#007aff] hover:text-[#005eff]"
+                            aria-label="Forgot password?">Forgot password?</a>
                     </div>
-                    <button type='submit' className="w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#007aff] hover:bg-[#005eff] ">
+
+                    <button type='submit'
+                        className="w-full py-2 px-4 border border-transparent rounded-md shadow-sm 
+                        text-sm font-medium text-white bg-[#007aff] hover:bg-[#005eff] ">
                         Sign in
                     </button>
 
@@ -59,14 +97,20 @@ const LoginForm = () => {
                         </div>
                     </div>
 
-                    <button type="button" className="flex items-center justify-center w-full py-2 px-4 rounded-md shadow-sm text-sm font-medium text-white bg-[#333333] hover:bg-[#1c1c1c]">
+                    <button type="button"
+                        className="flex items-center justify-center w-full py-2 px-4 rounded-md 
+                        shadow-sm text-sm font-medium text-white bg-[#333333] hover:bg-[#1c1c1c]">
                         <FcGoogle size={25} /> Or sign in with Google
                     </button>
-                    <div className='flex justify-center gap-3 text-sm'>
-                     <p className="text-center  text-gray-600"> Dont have an account? </p>
-                     <a href="#" className="font-medium text-[#007aff] hover:text-[#005eff]">Sign up now</a>
-                    </div>
-                    
+
+                    <nav className='flex justify-center gap-3 text-sm'>
+                        <p className="text-center  text-gray-600"> Dont have an account? </p>
+                        <a
+                            href="#"
+                            className="font-medium text-[#007aff] hover:text-[#005eff]"
+                            aria-label="Sign up now">Sign up now</a>
+                    </nav>
+
                 </form>
 
                 <div className='flex justify-center md:hidden'>
