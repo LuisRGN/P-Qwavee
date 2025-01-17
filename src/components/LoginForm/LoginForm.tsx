@@ -33,7 +33,7 @@ const LoginForm: React.FC = () => {
     };
 
     return (
-        <section className='md:w-[60%] w-[90%] mt-3'>
+        <section className='md:w-[60%] w-[90%]'>
             <section className="w-full max-w-md mx-auto space-y-6">
                 <section className='hidden md:block'>
                     <LogoSection />
