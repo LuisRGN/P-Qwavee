@@ -20,19 +20,19 @@ const Login: React.FC = () => {
 
   return (
     <main className='flex justify-center min-h-screen w-full'>
-      <section className='flex w-full max-w-[1550px]'>
+      <section className='flex w-full max-w-[1366px]'>
         <section className='relative w-[65%] hidden md:block'
           style={{ height: `${windowHeight}px` }}>
           <Image
             src="https://res.cloudinary.com/dtoditltb/image/upload/v1737060649/photo-1638718358942-ea45a721867b_uior81.avif"
             alt="Login background"
             fill
-            sizes="(max-width: 1550px) 70vw, 956px"
+            sizes="(max-width: 1366px) 70vw, 956px"
             className="object-cover"
             priority
           />
         </section>
-        <section className="w-full md:w-[45%] flex items-center justify-center">
+        <section className="w-full md:w-[45%] flex justify-center items-start">
           <LoginForm />
         </section>
       </section>
