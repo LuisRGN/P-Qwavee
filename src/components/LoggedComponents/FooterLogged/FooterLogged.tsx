@@ -9,10 +9,10 @@ function FooterLogged() {
         <footer className="py-8 text-white max-w-[1366px] mx-auto">
             <section className="max-w-6xl mx-auto text-center">
                 <div className="flex justify-center space-x-6 mt-4">
-                    <FaFacebookF className='text-[#072a52]' />
-                    <FaTwitter className='text-[#072a52]' />
-                    <FaInstagram className='text-[#072a52]' />
-                    <FaLinkedinIn className='text-[#072a52]' />
+                    <a href="https://www.facebook.com/" target="_blank"><FaFacebookF className='text-[#072a52]' /></a>
+                    <a href="https://x.com/" target="_blank"><FaTwitter className='text-[#072a52]' /></a>
+                    <a href="https://www.instagram.com/qwavee/" target="_blank"><FaInstagram className='text-[#072a52]' /></a>
+                    <a href="https://www.linkedin.com/company/qwavee/" target="_blank"><FaLinkedinIn className='text-[#072a52]' /></a>
                 </div>
                 <p className="mt-4 text-[#072a52]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
             </section>

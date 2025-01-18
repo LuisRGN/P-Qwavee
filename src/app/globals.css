@@ -2,6 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+.custom-bg {
+  width: 100%;
+  background: linear-gradient(to bottom, white 50%, #072a52 50%);
+}
+
+.custom-bg2 {
+  background: -webkit-linear-gradient(125deg, #fafafa, #f9f9f9, #cecece);
+  background: linear-gradient(125deg, #fafafa, #f9f9f9, #cecece);
+}
+
+.bg-gradient-custom {
+  background: linear-gradient(to top, rgba(59, 59, 59, 0.812) 30%, transparent 70%);
+}
+
+.bg-gradient-custom2 {
+  background: -webkit-linear-gradient(90deg, #14355a 0%, #3f5773 50%, #c3c1c1 100%);
+  background: linear-gradient(90deg, #14355a 0%, #3f5773 50%, #c3c1c1 100%);
+}
+
+.shadow-custom {
+  box-shadow: 0 0.1rem 0.2rem #dfddf2,
+    0 0.1rem 0.5rem #dfddf2,
+    0 0.2rem 1.5rem #dfddf2;
+}
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 

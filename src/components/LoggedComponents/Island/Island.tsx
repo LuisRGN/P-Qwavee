@@ -1,12 +1,13 @@
 'use client'
+import DivisorLine from '@/utils/DivisorLine/DivisorLine'
 import React from 'react'
 import ReactPlayer from 'react-player'
 
-function Island() {
+const Island = () => {
     return (
-        <section className="max-w-[1366px] mx-auto">
+        <section className="max-w-[1366px] mx-auto custom-bg">
             <h3 className="sr-only">The island</h3>
-            <section className='flex flex-col lg:flex-row bg-red-200 lg:ml-24 xl:ml-32 pt-12 overflow-hidden'>
+            <section className='flex flex-col lg:flex-row custom-bg2 lg:ml-24 xl:ml-32 pt-12 overflow-hidden'>
                 <section className='w-full lg:w-1/2 h-[300px] sm:h-[400px] lg:h-[500px] relative'>
 
                     <ReactPlayer
@@ -24,16 +25,9 @@ function Island() {
                 <div className='flex flex-col items-start py-10 px-6 sm:px-12 lg:px-16 xl:px-28 lg:w-1/2'>
                     <h2 className="text-3xl sm:text-4xl lg:text-5xl text-[#072a52] font-bold">The island</h2>
 
-                    <div className="relative my-6 sm:my-8 w-20">
-                        <div className="absolute inset-0 flex items-center">
-                            <div className="w-full border-t-2 border-[#072a52]"></div>
-                        </div>
-                        <div className="relative flex justify-center">
-                            <span className="px-2 bg-red-200 text-gray-500"></span>
-                        </div>
-                    </div>
+                    <DivisorLine color='#072a52' />
 
-                    <p className="text-gray-600 text-left w-full lg:max-w-[80%]">
+                    <p className="text-gray-600 text-left w-full">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries
                     </p>
 
