@@ -2,7 +2,7 @@
 import React from 'react'
 import ReactPlayer from 'react-player'
 
-const Island = () => {
+const Island: React.FC = () => {
     return (
         <section className="max-w-[1366px] mx-auto custom-bg">
             <h3 className="sr-only">The island</h3>
@@ -37,7 +37,7 @@ const Island = () => {
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries
                     </p>
 
-                    <button className="mt-6 p-3 sm:p-4 bg-[#072a52] text-white rounded hover:bg-[#0a3d7a] transition-colors duration-300">
+                    <button className="mt-6 p-2 sm:p-3 sm:px-6 bg-[#072a52] text-white rounded hover:bg-[#0a3d7a] transition-colors duration-300">
                         LEARN MORE
                     </button>
                 </div>
@@ -46,4 +46,4 @@ const Island = () => {
     )
 }
 
-export default Island
+export default Island;

@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image';
 import { BsArrowRight } from 'react-icons/bs'
 
-const Variations = () => {
+const Variations: React.FC = () => {
     return (
         <section className="py-16 px-4 max-w-[1366px] mx-auto">
             <section className="flex flex-col items-center">
@@ -50,7 +50,7 @@ const Variations = () => {
                 <section className='flex flex-col items-center mt-14 gap-3'>
                     <p className='text-[#072a52] font-bold text-3xl md:text-4xl lg:text-5xl text-center w-[60%]'>It has survived thru time
                         and also the onslaught of nature</p>
-                    <button className='mt-6 p-3 sm:p-4 bg-[#072a52] text-white rounded hover:bg-[#0a3d7a] transition-colors duration-300'>PRAESENTIUM VOL</button>
+                    <button className="mt-6 p-2 sm:p-3 sm:px-6 bg-[#072a52] text-white rounded hover:bg-[#0a3d7a] transition-colors duration-300">PRAESENTIUM VOL</button>
                 </section>
             </section>
         </section>

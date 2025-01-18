@@ -39,4 +39,4 @@ const Login: React.FC = () => {
     </main>
   )
 }
-export default Login
+export default Login;

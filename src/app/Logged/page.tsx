@@ -2,13 +2,13 @@ import Animals from '@/components/LoggedComponents/Animals/Animals'
 import FooterLogged from '@/components/LoggedComponents/FooterLogged/FooterLogged'
 import Header from '@/components/LoggedComponents/Header/Header'
 import Island from '@/components/LoggedComponents/Island/Island'
-import LogoSection from '@/components/LogoSection/LogoSection'
 import Nature from '@/components/LoggedComponents/Nature/Nature'
 import Pricing from '@/components/LoggedComponents/Pricing/Pricing'
 import Variations from '@/components/LoggedComponents/Variations/Variations'
 import React from 'react'
+import LogoSectionDos from '@/components/LogoSection/LogoSectionDos'
 
-const Logged = () => {
+const Logged: React.FC = () => {
     return (
         <div>
             <main>
@@ -30,7 +30,7 @@ const Logged = () => {
                 </section>
             </main>
             <section className='flex justify-center'>
-                <LogoSection />
+                <LogoSectionDos />
             </section>
             <FooterLogged />
         </div>
@@ -38,4 +38,4 @@ const Logged = () => {
     )
 }
 
-export default Logged
+export default Logged;

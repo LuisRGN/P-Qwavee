@@ -8,7 +8,7 @@ const PasswordInput: React.FC<PasswordInputProps> = ({
   const [showPassword, setShowPassword] = useState<boolean>(false);
 
   const togglePasswordVisibility = () => {
-    setShowPassword(!showPassword);
+    setShowPassword(prev => !prev);
   };
 
   return (

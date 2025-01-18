@@ -4,7 +4,7 @@ import { FaTwitter } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 
-function FooterLogged() {
+const FooterLogged: React.FC = () => {
     return (
         <footer className="py-8 text-white max-w-[1366px] mx-auto">
             <section className="max-w-6xl mx-auto text-center">
@@ -20,4 +20,4 @@ function FooterLogged() {
     );
 }
 
-export default FooterLogged
+export default FooterLogged;

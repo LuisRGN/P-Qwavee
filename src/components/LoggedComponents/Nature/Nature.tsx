@@ -1,11 +1,11 @@
 import React from 'react'
 import Image from 'next/image';
 
-const Nature = () => {
+const Nature: React.FC = () => {
     return (
         <section className="py-16 bg-[#072a52] text-white max-w-[1366px] mx-auto">
             <section className="flex flex-col items-center">
-                <h3 className="text-5xl font-bold">The Nature</h3>
+                <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold">The Nature</h3>
 
                 <div className="relative my-8 w-20 mx-auto md:mx-0">
                     <div className="absolute inset-0 flex items-center">

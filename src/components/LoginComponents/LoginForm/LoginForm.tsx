@@ -17,19 +17,44 @@ const LoginForm: React.FC = () => {
         password: '',
     });
 
-    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>): Promise<void> => {
         e.preventDefault();
         console.log('Form submitted:', formData);
+
+        try {
+            const response = await fetch('https://run.mocky.io/v3/9bd9774c-cc1b-471c-8aec-f6b2b524912f', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (!response.ok) {
+                throw new Error('Login failed');
+            }
+
+            const data = await response.json();
+            console.log('Response data:', data);
+
+            if (data.email !== formData.email || data.password !== formData.password) {
+                alert('Invalid credentials!');
+                return;
+            }
+
+            router.push("/Logged");
+        } catch (error) {
+            console.error('Error during login:', error);
+        }
 
         setFormData({
             email: '',
             password: '',
         });
-        router.push("/Logged");
     };
 
     return (
@@ -126,4 +151,4 @@ const LoginForm: React.FC = () => {
     )
 }
 
-export default LoginForm
+export default LoginForm;
