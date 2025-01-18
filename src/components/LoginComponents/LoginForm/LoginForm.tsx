@@ -4,7 +4,7 @@ import Switch from '../Switch/Switch'
 import { FcGoogle } from "react-icons/fc";
 import PasswordInput from '../PasswordInput/PasswordInput';
 import Footer from '../Footer/Footer';
-import LogoSection from '../LogoSection/LogoSection';
+import LogoSection from '../../LogoSection/LogoSection';
 import { LoginFormData } from '@/interfaces/LoginForm';
 import { useRouter } from "next/navigation";
 
@@ -45,7 +45,7 @@ const LoginForm: React.FC = () => {
                     <fieldset className='p-0'>
                         <legend className="sr-only">Login credentials</legend>
 
-                        <div className="space-y-2">
+                        <section className="space-y-2">
                             <label htmlFor="login" className="hidden md:block text-sm font-medium text-gray-700">Login</label>
                             <input
                                 className="w-full px-3 py-2 border bg-[#f2f2f2] rounded-md shadow-sm"
@@ -56,9 +56,9 @@ const LoginForm: React.FC = () => {
                                 onChange={handleInputChange}
                                 value={formData.email}
                                 aria-label="Email address" />
-                        </div>
+                        </section>
 
-                        <div className="space-y-2">
+                        <section className="space-y-2">
                             <label htmlFor="password" className="hidden md:block text-sm font-medium text-gray-700">Password</label>
                             <PasswordInput
                                 id="password"
@@ -68,11 +68,11 @@ const LoginForm: React.FC = () => {
                                 onChange={handleInputChange}
                                 value={formData.password}
                                 aria-label="Password" />
-                        </div>
+                        </section>
 
                     </fieldset>
 
-                    <div className='flex justify-between items-center'>
+                    <section className='flex justify-between items-center'>
                         <div className="flex items-center space-x-2">
                             <Switch checked={rememberMe} onChange={() => setRememberMe(!rememberMe)} />
                             <label
@@ -84,7 +84,7 @@ const LoginForm: React.FC = () => {
                             href="#"
                             className="text-sm text-[#007aff] hover:text-[#005eff]"
                             aria-label="Forgot password?">Forgot password?</a>
-                    </div>
+                    </section>
 
                     <button type='submit'
                         className="w-full py-2 px-4 border border-transparent rounded-md shadow-sm 

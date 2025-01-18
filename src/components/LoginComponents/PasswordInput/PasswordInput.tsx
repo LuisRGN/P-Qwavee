@@ -12,7 +12,7 @@ const PasswordInput: React.FC<PasswordInputProps> = ({
   };
 
   return (
-    <div className="relative">
+    <section className="relative">
       <input
         type={showPassword ? "text" : "password"}
         id={id}
@@ -38,7 +38,7 @@ const PasswordInput: React.FC<PasswordInputProps> = ({
       <span className="sr-only">
         {showPassword ? "Password is visible" : "Password is hidden"}
       </span>
-    </div>
+    </section>
   );
 };
 

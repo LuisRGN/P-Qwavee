@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
-import LoginForm from '../../components/LoginForm/LoginForm'
+import LoginForm from '../../components/LoginComponents/LoginForm/LoginForm'
 
 const Login: React.FC = () => {
   const [windowHeight, setwindowHeight] = useState<number>(0)
