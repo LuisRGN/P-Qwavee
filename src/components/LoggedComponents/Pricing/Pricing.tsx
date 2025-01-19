@@ -1,3 +1,4 @@
+import DivisorLine from '@/utils/DivisorLine';
 import Image from 'next/image'
 import React from 'react'
 
@@ -7,14 +8,7 @@ const Pricing: React.FC = () => {
             <section className="flex flex-col items-center">
                 <h3 className="text-3xl md:text-4xl lg:text-5xl text-center text-[#072a52] font-bold">Pricing</h3>
 
-                <div className="relative my-8 w-20 mx-auto md:mx-0">
-                    <div className="absolute inset-0 flex items-center">
-                        <div className="w-full border-t-2 border-[#072a52]"></div>
-                    </div>
-                    <div className="relative flex justify-center">
-                        <span className="px-2 bg-white text-gray-500"></span>
-                    </div>
-                </div>
+                <DivisorLine color='blue' />
 
                 <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 px-6 sm:px-16">
                     {[...Array(3)].map((_, index) => (

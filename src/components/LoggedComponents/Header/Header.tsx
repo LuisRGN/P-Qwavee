@@ -1,6 +1,7 @@
 import React from 'react'
 import LogoSection from '../../LogoSection/LogoSection';
 import Image from 'next/image';
+import DivisorLine from '@/utils/DivisorLine';
 
 
 const Header: React.FC = () => {
@@ -14,14 +15,7 @@ const Header: React.FC = () => {
                 <section className="flex flex-col items-center md:items-start text-center md:text-left">
                     <h1 className="text-3xl sm:text-4xl lg:text-5xl text-[#072a52] font-bold">Welcome Alex</h1>
 
-                    <div className="relative my-8 w-20 mx-auto md:mx-0">
-                        <div className="absolute inset-0 flex items-center">
-                            <div className="w-full border-t-2 border-[#072a52]"></div>
-                        </div>
-                        <div className="relative flex justify-center">
-                            <span className="px-2 bg-white text-gray-500"></span>
-                        </div>
-                    </div>
+                    <DivisorLine color='blue' />
 
                     <p className="text-gray-600 text-center md:text-left max-w-[65%]">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries

@@ -1,4 +1,5 @@
 'use client'
+import DivisorLine from '@/utils/DivisorLine'
 import React from 'react'
 import ReactPlayer from 'react-player'
 
@@ -24,14 +25,7 @@ const Island: React.FC = () => {
                 <div className='flex flex-col items-start py-10 px-6 sm:px-12 lg:px-16 xl:px-28 lg:w-1/2'>
                     <h2 className="text-3xl sm:text-4xl lg:text-5xl text-[#072a52] font-bold">The island</h2>
 
-                    <div className="relative my-8 w-20 mx-auto md:mx-0">
-                        <div className="absolute inset-0 flex items-center">
-                            <div className="w-full border-t-2 border-[#072a52]"></div>
-                        </div>
-                        <div className="relative flex justify-center">
-                            <span className="px-2 bg-white text-gray-500"></span>
-                        </div>
-                    </div>
+                    <DivisorLine color='blue' />
 
                     <p className="text-gray-600 text-left w-full">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries
