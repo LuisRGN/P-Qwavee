@@ -1,14 +1,7 @@
-import { Item } from '@/interfaces/Animals';
+import { itemsAnimals } from '@/utils/items';
 import React from 'react';
 
 const Animals: React.FC = () => {
-    const items: Item[] = [
-        { title: 'Lorem Is', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the.' },
-        { title: 'Lorem Ipsum Orem', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the.' },
-        { title: 'Randomised', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the.' },
-        { title: 'Not Simply', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the.' },
-        { title: 'Contrary', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the.' },
-    ];
 
     return (
         <section className="max-w-[1366px] mx-auto bg-gradient-custom2">
@@ -17,7 +10,7 @@ const Animals: React.FC = () => {
                     Nature, animals
                 </h3>
                 <ul className="text-white flex flex-col gap-5 md:w-[50%] w-[90%] md:text-left text-center list-none sm:list-disc">
-                    {items.map((item, index) => (
+                    {itemsAnimals.map((item, index) => (
                         <li key={index} className="ml-4">
                             {item.title}
                             <p>{item.description}</p>

@@ -18,7 +18,7 @@ const Pricing: React.FC = () => {
 
                 <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 px-6 sm:px-16">
                     {[...Array(3)].map((_, index) => (
-                        <article key={index} className="flex flex-col shadow-custom ">
+                        <article key={index} className="flex flex-col shadow-custom transform transition-all duration-300 hover:scale-105">
                             <figure className="w-full h-72 relative overflow-hidden">
                                 <Image
                                     src="https://res.cloudinary.com/dtoditltb/image/upload/v1737061497/Cabo_de_Ajo_lighthouse_x27ayb.jpg"

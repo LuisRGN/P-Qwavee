@@ -21,7 +21,7 @@ const Variations: React.FC = () => {
                     {[...Array(4)].map((_, index) => (
                         <article
                             key={index}
-                            className="w-full h-[20rem] sm:h-[24rem] lg:h-[30rem] relative overflow-hidden shadow-lg"
+                            className="w-full h-[20rem] sm:h-[24rem] lg:h-[30rem] relative overflow-hidden shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl"
                         >
                             <figure className="w-full h-full relative">
                                 <Image
