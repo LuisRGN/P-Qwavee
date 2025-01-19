@@ -42,13 +42,16 @@ Para clonar e instalar el proyecto, sigue estos pasos:
 4. **Accede a la aplicación en tu navegador:**
    
    Abre http://localhost:3000 en tu navegador para ver el resultado.
+   
    Para probar en otros navegadores, simplemente abre la URL en el navegador que prefieras.
 
 ## Librerías Utilizadas
 
    Este proyecto utiliza las siguientes librerías:
-   *react-icons: Utilizada para agregar iconos personalizados en el proyecto.
-   *react-player: Utilizada para insertar un reproductor de video en la aplicación.
+   
+      react-icons: Utilizada para agregar iconos personalizados en el proyecto.
+      
+      react-player: Utilizada para insertar un reproductor de video en la aplicación.
 
 ## Integración con Mocky
 
@@ -58,8 +61,9 @@ Para clonar e instalar el proyecto, sigue estos pasos:
 
   Para poder iniciar sesión en la aplicación, utiliza las siguientes credenciales:
 
-  *Email: usuario@example.com
-  *Contraseña: 123456
+      Email: usuario@example.com
+      
+     Contraseña: 123456
 
   Estas credenciales son necesarias para acceder al proyecto
 
