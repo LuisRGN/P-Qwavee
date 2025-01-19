@@ -1,12 +1,29 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image';
 import { CardItem } from '@/interfaces/Nature';
-import { itemsNature } from '@/utils/items';
 
 const Nature: React.FC = () => {
     const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
     const [selectedItem, setSelectedItem] = useState<CardItem | null>(null);
+    const [itemsNature, setItemsNature] = useState<CardItem[]>([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await fetch('https://run.mocky.io/v3/67899179-723c-49ca-a5b9-8781d2bec10a');
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                const data = await response.json();
+                setItemsNature(data);
+            } catch (error) {
+                console.error('Fetch error: ', error);
+            }
+        };
+
+        fetchData();
+    }, []);
 
     const handleCardClick = (item: CardItem) => {
         setSelectedItem(item);
