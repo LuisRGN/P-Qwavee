@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Proyecto de Next.js, Prueba Qwavee
 
-## Getting Started
+Este es un proyecto de [Next.js](https://nextjs.org) creado con [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-First, run the development server:
+## Clonar/Instalar el Proyecto
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Para clonar e instalar el proyecto, sigue estos pasos:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. **Clona el repositorio:**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+   Si aún no has clonado el repositorio, usa el siguiente comando:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+   ```bash
+   git clone https://github.com/tu-usuario/tu-repositorio.git
 
-## Learn More
+2. **Instala las dependecias:**
 
-To learn more about Next.js, take a look at the following resources:
+   Una vez clonado el repositorio, ve al directorio del proyecto e instala las dependencias utilizando uno de estos comandos:
+   
+   ```bash
+   npm install
+   o
+   yarn install
+   o
+   pnpm install
+   o
+   bun install
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. **Corre el servidor de desarrollo:**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   Para iniciar el servidor de desarrollo, usa uno de estos comandos:
 
-## Deploy on Vercel
+   ```bash
+   npm run dev
+   o
+   yarn dev
+   o
+   pnpm dev
+   o
+   bun dev
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. **Accede a la aplicación en tu navegador:**
+   
+   Abre http://localhost:3000 en tu navegador para ver el resultado.
+   Para probar en otros navegadores, simplemente abre la URL en el navegador que prefieras.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Librerías Utilizadas
+
+   Este proyecto utiliza las siguientes librerías:
+   react-icons: Utilizada para agregar iconos personalizados en el proyecto.
+   react-player: Utilizada para insertar un reproductor de video en la aplicación.
+
+## Integración con Mocky
+
+   Este proyecto simula un sistema de login y obtiene datos para las cards de un componente utilizando una API simulada proporcionada por Mocky.
+
+**Datos de Login:**
+
+  Para poder iniciar sesión en la aplicación, utiliza las siguientes credenciales:
+
+  Email: usuario@example.com
+  Contraseña: 123456
+
+  Estas credenciales son necesarias para acceder al proyecto
+
+**Componente de Cards y Modal**
+
+El proyecto incluye un componente de cards que obtiene sus datos a través de la API simulada, además de un modal simple en la seccion de The Nature.
+  
