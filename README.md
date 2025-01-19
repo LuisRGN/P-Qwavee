@@ -63,7 +63,7 @@ Para clonar e instalar el proyecto, sigue estos pasos:
 
       Email: usuario@example.com
       
-     Contraseña: 123456
+      Contraseña: 123456
 
   Estas credenciales son necesarias para acceder al proyecto
 
