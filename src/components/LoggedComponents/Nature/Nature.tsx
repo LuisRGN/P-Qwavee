@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image';
 import { CardItem } from '@/interfaces/Nature';
-import DivisorLine from '@/utils/DivisorLine';
 
 const Nature: React.FC = () => {
     const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
@@ -39,9 +38,10 @@ const Nature: React.FC = () => {
     return (
         <section className="py-16 bg-[#072a52] text-white max-w-[1366px] mx-auto">
             <section className="flex flex-col items-center">
-                <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold">The Nature</h3>
-
-                <DivisorLine color='white' />
+                <div>
+                    <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold">The Nature</h3>
+                    <div className="border-b-[3px] border-white w-16 sm:w-24 my-9 mx-auto"></div>
+                </div>
 
             </section>
             <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 px-6 sm:px-16 lg:px-32">

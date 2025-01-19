@@ -1,15 +1,15 @@
 import React from 'react'
 import Image from 'next/image';
 import { BsArrowRight } from 'react-icons/bs'
-import DivisorLine from '@/utils/DivisorLine';
 
 const Variations: React.FC = () => {
     return (
         <section className="py-16 px-4 max-w-[1366px] mx-auto">
             <section className="flex flex-col items-center">
-                <h3 className="text-3xl md:text-4xl lg:text-5xl text-center text-[#072a52] font-bold">There Are Many Variations</h3>
-
-                <DivisorLine color='blue' />
+                <div>
+                    <h3 className="text-3xl md:text-4xl lg:text-5xl text-center text-[#072a52] font-bold">There Are Many Variations</h3>
+                    <div className="border-b-[3px] border-[#072a52] w-16 sm:w-24 my-9 mx-auto"></div>
+                </div>
 
                 <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mt-12 mb-20 w-full">
                     {[...Array(4)].map((_, index) => (
