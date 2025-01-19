@@ -28,6 +28,18 @@
     0 0.2rem 1.5rem #dfddf2;
 }
 
+.button-blue {
+  @apply mt-6 p-2 sm:p-3 sm:px-6 bg-[#072a52] text-white rounded hover:bg-[#0a3d7a] transition-colors duration-300;
+}
+
+.button-white {
+  @apply mt-6 p-2 sm:p-3 sm:px-6 bg-white text-[#072a52] rounded hover:bg-[#d5d5d5] transition-colors duration-300 font-medium;
+}
+
+.max-limit {
+  @apply max-w-[1366px] mx-auto
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document

@@ -42,7 +42,7 @@ const Pricing: React.FC = () => {
                 </section>
 
                 <section className='flex justify-center mt-14 gap-3'>
-                    <button className="mt-6 p-2 sm:p-3 sm:px-6 bg-[#072a52] text-white rounded hover:bg-[#0a3d7a] transition-colors duration-300">FIND MORE</button>
+                    <button className="button-blue">FIND MORE</button>
                 </section>
             </section>
         </section>

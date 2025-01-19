@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 const Header: React.FC = () => {
     return (
-        <header className="text-center p-8 bg-white max-w-[1366px] mx-auto"
+        <header className="text-center p-8 bg-white max-limit"
             style={{ backgroundImage: "url('https://res.cloudinary.com/dtoditltb/image/upload/v1737140823/3b07e6f0fb0b5808e29e621bb4bc0dfe_skn5e8.png')", backgroundSize: 'cover' }}>
             <section className='ml-10'>
                 <LogoSection />
@@ -14,13 +14,13 @@ const Header: React.FC = () => {
                 <section className="flex flex-col items-center md:items-start text-center md:text-left">
                     <div>
                         <h1 className="text-3xl sm:text-4xl lg:text-5xl text-[#072a52] font-bold">Welcome Alex</h1>
-                        <div className="border-b-[3px] border-[#072a52] w-16 sm:w-24 mt-8 sm:mt-20 mb-6 sm:mb-10 sm:mx-0 mx-auto"></div>
+                        <div className="border-b-[3px] border-[#072a52] w-16 sm:w-24 mt-8 sm:mt-20 mb-6 sm:mb-10 md:mx-0 mx-auto"></div>
                     </div>
 
                     <p className="text-gray-600 text-center md:text-left max-w-[65%]">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries
                     </p>
-                    <button className="mt-6 p-2 sm:p-3 sm:px-6 bg-[#072a52] text-white rounded hover:bg-[#0a3d7a] transition-colors duration-300">
+                    <button className="button-blue">
                         READABLE ENGLISH
                     </button>
                 </section>

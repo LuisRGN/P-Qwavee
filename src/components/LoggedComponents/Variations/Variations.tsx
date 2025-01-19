@@ -44,7 +44,7 @@ const Variations: React.FC = () => {
                 <section className='flex flex-col items-center mt-14 gap-3'>
                     <p className='text-[#072a52] font-bold text-3xl md:text-4xl lg:text-5xl text-center w-[60%]'>It has survived thru time
                         and also the onslaught of nature</p>
-                    <button className="mt-6 p-2 sm:p-3 sm:px-6 bg-[#072a52] text-white rounded hover:bg-[#0a3d7a] transition-colors duration-300">PRAESENTIUM VOL</button>
+                    <button className="button-blue">PRAESENTIUM VOL</button>
                 </section>
             </section>
         </section>

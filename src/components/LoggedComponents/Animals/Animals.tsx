@@ -17,7 +17,7 @@ const Animals: React.FC = () => {
                         </li>
                     ))}
                 </ul>
-                <button className="mt-6 p-2 sm:p-3 sm:px-6 bg-white text-[#072a52] rounded hover:bg-[#d5d5d5] transition-colors duration-300 font-medium">
+                <button className="button-white">
                     EXPLORE MORE
                 </button>
             </section>
