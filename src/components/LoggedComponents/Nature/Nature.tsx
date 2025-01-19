@@ -36,11 +36,11 @@ const Nature: React.FC = () => {
     };
 
     return (
-        <section className="py-16 bg-[#072a52] text-white max-w-[1366px] mx-auto">
+        <section className="max-limit py-16 bg-[#072a52] text-white">
             <section className="flex flex-col items-center">
                 <div>
-                    <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold">The Nature</h3>
-                    <div className="border-b-[3px] border-white w-16 sm:w-24 my-9 mx-auto"></div>
+                    <h3 className="title-component">The Nature</h3>
+                    <div className="divisor-line-three"></div>
                 </div>
 
             </section>
@@ -48,7 +48,7 @@ const Nature: React.FC = () => {
                 {itemsNature.map((item, index) => (
                     <article
                         key={index}
-                        className="flex flex-col transform transition-all duration-300 hover:scale-105"
+                        className="simple-animation-card flex flex-col"
                         onClick={() => handleCardClick(item)}
                     >
                         <figure className="w-full h-72 relative overflow-hidden">

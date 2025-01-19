@@ -3,6 +3,8 @@
 @tailwind components;
 @tailwind utilities;
 
+/*Custom Backgrounds*/
+
 .custom-bg {
   width: 100%;
   background: linear-gradient(to bottom, white 50%, #072a52 50%);
@@ -28,6 +30,10 @@
     0 0.2rem 1.5rem #dfddf2;
 }
 
+/*Custom Backgrounds*/
+
+/*Custom Class Componenets*/
+
 .button-blue {
   @apply mt-6 p-2 sm:p-3 sm:px-6 bg-[#072a52] text-white rounded hover:bg-[#0a3d7a] transition-colors duration-300;
 }
@@ -39,6 +45,32 @@
 .max-limit {
   @apply max-w-[1366px] mx-auto
 }
+
+.divisor-line-one {
+  @apply border-b-[3px] border-[#072a52] w-16 sm:w-24 mt-8 sm:mt-20 mb-6 sm:mb-10 md:mx-0 mx-auto
+}
+
+.divisor-line-two {
+  @apply border-b-[3px] border-[#072a52] w-16 sm:w-24 my-9 sm:mx-0 mx-auto
+}
+
+.divisor-line-three {
+  @apply border-b-[3px] border-white w-16 sm:w-24 my-9 mx-auto
+}
+
+.divisor-line-four {
+  @apply border-b-[3px] border-[#072a52] w-16 sm:w-24 my-9 mx-auto
+}
+
+.title-component {
+  @apply text-3xl sm:text-4xl lg:text-5xl font-bold
+}
+
+.simple-animation-card {
+  @apply transform transition-all duration-300 hover:scale-105
+}
+
+/*Custom Class Componenets*/
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 

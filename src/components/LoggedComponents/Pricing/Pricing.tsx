@@ -3,15 +3,15 @@ import React from 'react'
 
 const Pricing: React.FC = () => {
     return (
-        <section className="py-16 px-4 max-w-[1366px] mx-auto">
+        <section className="max-limit py-16 px-4">
             <section className="flex flex-col items-center">
                 <div>
-                    <h3 className="text-3xl md:text-4xl lg:text-5xl text-center text-[#072a52] font-bold">Pricing</h3>
-                    <div className="border-b-[3px] border-[#072a52] w-16 sm:w-24 my-9 mx-auto"></div>
+                    <h3 className="title-component text-center text-[#072a52]">Pricing</h3>
+                    <div className="divisor-line-four"></div>
                 </div>
                 <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 px-6 sm:px-16">
                     {[...Array(3)].map((_, index) => (
-                        <article key={index} className="flex flex-col shadow-custom transform transition-all duration-300 hover:scale-105">
+                        <article key={index} className="shadow-custom simple-animation-card flex flex-col">
                             <figure className="w-full h-72 relative overflow-hidden">
                                 <Image
                                     src="https://res.cloudinary.com/dtoditltb/image/upload/v1737061497/Cabo_de_Ajo_lighthouse_x27ayb.jpg"

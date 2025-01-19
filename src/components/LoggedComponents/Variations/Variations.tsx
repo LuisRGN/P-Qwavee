@@ -4,18 +4,18 @@ import { BsArrowRight } from 'react-icons/bs'
 
 const Variations: React.FC = () => {
     return (
-        <section className="py-16 px-4 max-w-[1366px] mx-auto">
+        <section className="max-limit py-16 px-4">
             <section className="flex flex-col items-center">
                 <div>
-                    <h3 className="text-3xl md:text-4xl lg:text-5xl text-center text-[#072a52] font-bold">There Are Many Variations</h3>
-                    <div className="border-b-[3px] border-[#072a52] w-16 sm:w-24 my-9 mx-auto"></div>
+                    <h3 className="title-component text-center text-[#072a52]">There Are Many Variations</h3>
+                    <div className="divisor-line-four"></div>
                 </div>
 
                 <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mt-12 mb-20 w-full">
                     {[...Array(4)].map((_, index) => (
                         <article
                             key={index}
-                            className="w-full h-[20rem] sm:h-[24rem] lg:h-[30rem] relative overflow-hidden shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                            className="simple-animation-card shadow-lg hover:shadow-xl w-full h-[20rem] sm:h-[24rem] lg:h-[30rem] relative overflow-hidden "
                         >
                             <figure className="w-full h-full relative">
                                 <Image

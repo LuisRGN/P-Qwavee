@@ -16,7 +16,7 @@ const Login: React.FC = () => {
 
   return (
     <main className='flex justify-center items-center min-h-screen w-full'>
-      <section className='flex w-full max-w-[1366px] h-[100vh] bg-white overflow-hidden'>
+      <section className='max-limit flex w-full h-[100vh] overflow-hidden'>
         <section className='relative w-[65%] hidden md:block'>
           <div className="absolute inset-0 overflow-hidden">
             <Image

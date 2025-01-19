@@ -5,16 +5,16 @@ import Image from 'next/image';
 
 const Header: React.FC = () => {
     return (
-        <header className="text-center p-8 bg-white max-limit"
+        <header className="max-limit p-8"
             style={{ backgroundImage: "url('https://res.cloudinary.com/dtoditltb/image/upload/v1737140823/3b07e6f0fb0b5808e29e621bb4bc0dfe_skn5e8.png')", backgroundSize: 'cover' }}>
-            <section className='ml-10'>
+            <section className='flex justify-center md:justify-start md:ml-10'>
                 <LogoSection />
             </section>
             <section className='flex items-center mx-6 flex-col md:flex-row md:justify-between'>
                 <section className="flex flex-col items-center md:items-start text-center md:text-left">
                     <div>
-                        <h1 className="text-3xl sm:text-4xl lg:text-5xl text-[#072a52] font-bold">Welcome Alex</h1>
-                        <div className="border-b-[3px] border-[#072a52] w-16 sm:w-24 mt-8 sm:mt-20 mb-6 sm:mb-10 md:mx-0 mx-auto"></div>
+                        <h1 className="title-component text-[#072a52]">Welcome Alex</h1>
+                        <div className="divisor-line-one"></div>
                     </div>
 
                     <p className="text-gray-600 text-center md:text-left max-w-[65%]">
