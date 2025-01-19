@@ -41,3 +41,9 @@ export const itemsAnimals: Item[] = [
     { title: 'Not Simply', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the.' },
     { title: 'Contrary', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the.' },
 ];
+
+export const imageCarousel: string[] = [
+    "https://res.cloudinary.com/dtoditltb/image/upload/v1737060649/photo-1638718358942-ea45a721867b_uior81.avif",
+    "https://res.cloudinary.com/dtoditltb/image/upload/v1737298056/photo-1502830687210-91a2c0b1e4f3_mpiuv0.avif",
+    "https://res.cloudinary.com/dtoditltb/image/upload/v1737297561/premium_photo-1664353833678-b65f6a9f1d1f_k38syk.avif"
+]

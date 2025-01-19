@@ -3,8 +3,8 @@ import Image from 'next/image'
 
 const Footer: React.FC = () => {
     return (
-        <footer className="md:mt-[50%] mt-[10%] pt-6">
-            <div className='flex justify-between text-sm'>
+        <footer className='mb-5'>
+            <section className='flex justify-between text-sm'>
                 <div className='flex text-[#007aff]'>
                     <Image
                         src="https://res.cloudinary.com/dtoditltb/image/upload/v1737074637/62c6bc57eee9410fe137d921_ppkihu.png"
@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
                 <div className='text-[#666666]'>
                     &copy; Perfect Login 2025
                 </div>
-            </div>
+            </section>
         </footer>
     )
 }

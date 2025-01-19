@@ -2,37 +2,34 @@
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import LoginForm from '../../components/LoginComponents/LoginForm/LoginForm'
+import { imageCarousel } from '@/utils/items'
 
 const Login: React.FC = () => {
-  const [windowHeight, setwindowHeight] = useState<number>(0)
+  const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
 
   useEffect(() => {
-    const updateHeight = () => {
-      setwindowHeight(window.innerHeight)
-    }
-    updateHeight()
-    window.addEventListener('resize', updateHeight)
-
-    return () => {
-      window.removeEventListener('resize', updateHeight)
-    }
-  }, [])
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % imageCarousel.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
-    <main className='flex justify-center min-h-screen w-full'>
-      <section className='flex w-full max-w-[1366px]'>
-        <section className='relative w-[65%] hidden md:block'
-          style={{ height: `${windowHeight}px` }}>
-          <Image
-            src="https://res.cloudinary.com/dtoditltb/image/upload/v1737060649/photo-1638718358942-ea45a721867b_uior81.avif"
-            alt="Login background"
-            fill
-            sizes="(max-width: 1366px) 70vw, 956px"
-            className="object-cover"
-            priority
-          />
+    <main className='flex justify-center items-center min-h-screen w-full'>
+      <section className='flex w-full max-w-[1366px] h-[100vh] bg-white overflow-hidden'>
+        <section className='relative w-[65%] hidden md:block'>
+          <div className="absolute inset-0 overflow-hidden">
+            <Image
+              src={imageCarousel[currentImageIndex]}
+              alt="Login background"
+              fill
+              sizes="(max-width: 1366px) 70vw, 956px"
+              className="object-cover object-center"
+              priority
+            />
+          </div>
         </section>
-        <section className="w-full md:w-[45%] flex justify-center items-start">
+        <section className="w-full md:w-[35%] flex justify-center items-start overflow-y-auto">
           <LoginForm />
         </section>
       </section>
