@@ -29,7 +29,7 @@ const Header: React.FC = () => {
                     alt='mirador del faro de ponta do pargo'
                     width={350}
                     height={350}
-                    className='rounded-[100%] object-cover w-[105%] mt-8 md:mt-0'
+                    className='rounded-[100%] object-cover w-[90%] 3xl:w-[30%] mt-8 md:mt-0'
                 />
             </section>
         </header>
