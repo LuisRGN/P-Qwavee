@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image';
 import { CardItem } from '@/interfaces/Nature';
+import { FaWindowClose } from "react-icons/fa";
 
 const Nature: React.FC = () => {
     const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
@@ -36,11 +37,11 @@ const Nature: React.FC = () => {
     };
 
     return (
-        <section className="max-limit py-16 bg-[#072a52] text-white">
+        <section className="py-16 bg-[#072a52] text-white">
             <section className="flex flex-col items-center">
                 <div>
-                    <h3 className="title-component">The Nature</h3>
-                    <div className="divisor-line-three"></div>
+                    <h3 className="title__component">The Nature</h3>
+                    <div className="divisor-line--three"></div>
                 </div>
 
             </section>
@@ -48,10 +49,10 @@ const Nature: React.FC = () => {
                 {itemsNature.map((item, index) => (
                     <article
                         key={index}
-                        className="simple-animation-card flex flex-col"
+                        className="simple-animation__card flex flex-col"
                         onClick={() => handleCardClick(item)}
                     >
-                        <figure className="w-full h-72 relative overflow-hidden">
+                        <figure className="w-full h-72 relative overflow-hidden cursor-pointer">
                             <Image
                                 src={item.image}
                                 alt="Nature"
@@ -72,12 +73,12 @@ const Nature: React.FC = () => {
 
             {isModalOpen && selectedItem && (
                 <div className="fixed inset-0 bg-gray-900 bg-opacity-50 flex justify-center items-center z-50">
-                    <div className="bg-[#d6d6d6] p-3 rounded-lg max-w-lg w-full">
+                    <div className="bg-[#d6d6d6] p-3 rounded max-w-lg w-full">
                         <div className="relative">
                             <button
                                 onClick={handleCloseModal}
-                                className="absolute top-0 right-0 p-2 text-black bg-red-600 rounded z-10"
-                            >X</button>
+                                className="absolute top-0 px-1 right-0 z-10"
+                            ><FaWindowClose color='red' size={50} /></button>
                             <figure className="w-full rounded h-64 relative overflow-hidden mb-4">
                                 <Image
                                     src={selectedItem.image}

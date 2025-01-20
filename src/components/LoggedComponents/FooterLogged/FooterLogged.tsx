@@ -6,7 +6,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 
 const FooterLogged: React.FC = () => {
     return (
-        <footer className="max-limit py-8 text-white">
+        <footer className="py-8 text-white">
             <section className="max-w-6xl mx-auto text-center">
                 <div className="flex justify-center space-x-6 mt-4">
                     <a href="https://www.facebook.com/" target="_blank"><FaFacebookF className='text-[#072a52]' /></a>

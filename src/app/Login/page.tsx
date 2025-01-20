@@ -16,7 +16,7 @@ const Login: React.FC = () => {
 
   return (
     <main className='flex justify-center items-center min-h-screen w-full'>
-      <section className='max-limit flex w-full h-[100vh] overflow-hidden'>
+      <section className='flex w-full h-[100vh] overflow-hidden'>
         <section className='relative w-[65%] hidden md:block'>
           <div className="absolute inset-0 overflow-hidden">
             <Image
@@ -29,7 +29,7 @@ const Login: React.FC = () => {
             />
           </div>
         </section>
-        <section className="w-full md:w-[35%] flex justify-center items-start overflow-y-auto">
+        <section className="w-full md:w-[35%] flex justify-center items-start">
           <LoginForm />
         </section>
       </section>

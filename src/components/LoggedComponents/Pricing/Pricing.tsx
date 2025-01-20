@@ -3,15 +3,15 @@ import React from 'react'
 
 const Pricing: React.FC = () => {
     return (
-        <section className="max-limit py-16 px-4">
+        <section className="py-16 px-4">
             <section className="flex flex-col items-center">
                 <div>
-                    <h3 className="title-component text-center text-[#072a52]">Pricing</h3>
-                    <div className="divisor-line-four"></div>
+                    <h3 className="title__component text-center text-[#072a52]">Pricing</h3>
+                    <div className="divisor-line--four"></div>
                 </div>
                 <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 px-6 sm:px-16">
                     {[...Array(3)].map((_, index) => (
-                        <article key={index} className="shadow-custom simple-animation-card flex flex-col">
+                        <article key={index} className="shadow--custom simple-animation__card flex flex-col">
                             <figure className="w-full h-72 relative overflow-hidden">
                                 <Image
                                     src="https://res.cloudinary.com/dtoditltb/image/upload/v1737061497/Cabo_de_Ajo_lighthouse_x27ayb.jpg"
@@ -25,7 +25,7 @@ const Pricing: React.FC = () => {
                                     Image {index + 1}
                                 </figcaption>
                             </figure>
-                            <span className="px-4 pt-4 pb-8 flex flex-col text-center gap-4">
+                            <span className="px-4 pt-6 pb-8 flex flex-col text-center gap-6">
                                 <span className='text-gray-300'>Lorem Ipsum is simply dummy text</span>
 
                                 <h4 className="text-xl font-bold text-[#072a52]">There are many variationsof passages of Lorem Ipsum Is</h4>
@@ -42,7 +42,7 @@ const Pricing: React.FC = () => {
                 </section>
 
                 <section className='flex justify-center mt-14 gap-3'>
-                    <button className="button-blue">FIND MORE</button>
+                    <button className="button--blue">FIND MORE</button>
                 </section>
             </section>
         </section>

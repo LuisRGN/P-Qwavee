@@ -58,7 +58,7 @@ const LoginForm: React.FC = () => {
     };
 
     return (
-        <section className='min-h-screen flex flex-col md:w-[60%] w-[90%]'>
+        <section className='min-h-screen flex flex-col md:w-[90%] w-[100%] px-5'>
             <section className='flex-grow flex flex-col'>
                 <section className="w-full max-w-md mx-auto space-y-6">
                     <section className='hidden md:block'>
@@ -68,11 +68,11 @@ const LoginForm: React.FC = () => {
                     <h1 className="text-2xl font-bold">Nice to see you again</h1>
 
                     <form className="space-y-4" onSubmit={handleSubmit}>
-                        <fieldset className='p-0'>
+                        <fieldset className='flex flex-col md:gap-4 gap-2 p-0'>
                             <legend className="sr-only">Login credentials</legend>
 
                             <section className="space-y-2">
-                                <label htmlFor="login" className="hidden md:block text-sm font-medium text-gray-700">Login</label>
+                                <label htmlFor="login" className="hidden md:block text-sm font-medium text-gray-700 ml-4">Login</label>
                                 <input
                                     className="w-full px-3 py-2 border bg-[#f2f2f2] rounded-md shadow-sm"
                                     type="text"
@@ -85,7 +85,7 @@ const LoginForm: React.FC = () => {
                             </section>
 
                             <section className="space-y-2">
-                                <label htmlFor="password" className="hidden md:block text-sm font-medium text-gray-700">Password</label>
+                                <label htmlFor="password" className="hidden md:block text-sm font-medium text-gray-700 ml-4">Password</label>
                                 <PasswordInput
                                     id="password"
                                     placeholder="Enter password"
@@ -123,7 +123,7 @@ const LoginForm: React.FC = () => {
                                 <div className="w-full border-t border-gray-300"></div>
                             </div>
                             <div className="relative flex justify-center">
-                                <span className="px-2 bg-white text-gray-500"></span>
+                                <span className="px-2 py-6 text-gray-500"></span>
                             </div>
                         </div>
 

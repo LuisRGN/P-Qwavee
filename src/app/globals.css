@@ -3,74 +3,77 @@
 @tailwind components;
 @tailwind utilities;
 
-/*Custom Backgrounds*/
+/* Main block: custom-bg */
 
 .custom-bg {
   width: 100%;
   background: linear-gradient(to bottom, white 50%, #072a52 50%);
 }
 
-.custom-bg2 {
+.custom-bg--alt {
   background: -webkit-linear-gradient(125deg, #fafafa, #f9f9f9, #cecece);
   background: linear-gradient(125deg, #fafafa, #f9f9f9, #cecece);
 }
 
-.bg-gradient-custom {
+/* Main block: bg-gradient */
+
+.bg-gradient__custom {
   background: linear-gradient(to top, rgba(59, 59, 59, 0.812) 30%, transparent 70%);
 }
 
-.bg-gradient-custom2 {
+.bg-gradient__custom--alt {
   background: -webkit-linear-gradient(90deg, #14355a 0%, #3f5773 50%, #c3c1c1 100%);
   background: linear-gradient(90deg, #14355a 0%, #3f5773 50%, #c3c1c1 100%);
 }
 
-.shadow-custom {
+/* Main block: shadow */
+
+.shadow--custom {
   box-shadow: 0 0.1rem 0.2rem #dfddf2,
     0 0.1rem 0.5rem #dfddf2,
     0 0.2rem 1.5rem #dfddf2;
 }
 
-/*Custom Backgrounds*/
+/* Main block: button */
 
-/*Custom Class Componenets*/
-
-.button-blue {
+.button--blue {
   @apply mt-6 p-2 sm:p-3 sm:px-6 bg-[#072a52] text-white rounded hover:bg-[#0a3d7a] transition-colors duration-300;
 }
 
-.button-white {
+.button--white {
   @apply mt-6 p-2 sm:p-3 sm:px-6 bg-white text-[#072a52] rounded hover:bg-[#d5d5d5] transition-colors duration-300 font-medium;
 }
 
-.max-limit {
-  @apply max-w-[1366px] mx-auto
-}
+/* Main block: divisor-line */
 
-.divisor-line-one {
+.divisor-line--one {
   @apply border-b-[3px] border-[#072a52] w-16 sm:w-24 mt-8 sm:mt-20 mb-6 sm:mb-10 md:mx-0 mx-auto
 }
 
-.divisor-line-two {
+.divisor-line--two {
   @apply border-b-[3px] border-[#072a52] w-16 sm:w-24 my-9 sm:mx-0 mx-auto
 }
 
-.divisor-line-three {
+.divisor-line--three {
   @apply border-b-[3px] border-white w-16 sm:w-24 my-9 mx-auto
 }
 
-.divisor-line-four {
+.divisor-line--four {
   @apply border-b-[3px] border-[#072a52] w-16 sm:w-24 my-9 mx-auto
 }
 
-.title-component {
+/* Main blockl: title */
+
+.title__component {
   @apply text-3xl sm:text-4xl lg:text-5xl font-bold
 }
 
-.simple-animation-card {
+/* Main block: simple-animation */
+
+.simple-animation__card {
   @apply transform transition-all duration-300 hover:scale-105
 }
 
-/*Custom Class Componenets*/
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
