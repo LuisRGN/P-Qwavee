@@ -7,6 +7,8 @@ import Footer from '../Footer/Footer';
 import LogoSection from '../../LogoSection/LogoSection';
 import { LoginFormData } from '@/interfaces/LoginForm';
 import { useRouter } from "next/navigation";
+import Swal from 'sweetalert2';
+import { loginUser } from '@/utils/authService';
 
 
 const LoginForm: React.FC = () => {
@@ -22,33 +24,28 @@ const LoginForm: React.FC = () => {
     };
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>): Promise<void> => {
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
         e.preventDefault();
-        console.log('Form submitted:', formData);
 
-        try {
-            const response = await fetch('https://run.mocky.io/v3/9bd9774c-cc1b-471c-8aec-f6b2b524912f', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData),
+        if (!emailRegex.test(formData.email)) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Invalid Email',
+                text: 'Please enter a valid email.',
             });
+            return;
+        }
 
-            if (!response.ok) {
-                throw new Error('Login failed');
-            }
+        const isLoginSuccessful = await loginUser(formData.email, formData.password, rememberMe);
 
-            const data = await response.json();
-            console.log('Response data:', data);
-
-            if (data.email !== formData.email || data.password !== formData.password) {
-                alert('Invalid credentials!');
-                return;
-            }
-
-            router.push("/Logged");
-        } catch (error) {
-            console.error('Error during login:', error);
+        if (isLoginSuccessful) {
+            router.push('/Logged');
+        } else {
+            Swal.fire({
+                icon: 'error',
+                title: 'Invalid credentials.',
+                text: 'Please verify your email and password.',
+            });
         }
 
         setFormData({
@@ -65,17 +62,17 @@ const LoginForm: React.FC = () => {
                         <LogoSection />
                     </section>
 
-                    <h1 className="text-2xl font-bold">Nice to see you again</h1>
+                    <h1 className="text-2xl font-semibold typography--poppins text-[20px] text-[#1A1A1A]">Nice to see you again</h1>
 
                     <form className="space-y-4" onSubmit={handleSubmit}>
                         <fieldset className='flex flex-col md:gap-4 gap-2 p-0'>
                             <legend className="sr-only">Login credentials</legend>
 
                             <section className="space-y-2">
-                                <label htmlFor="login" className="hidden md:block text-sm font-medium text-gray-700 ml-4">Login</label>
+                                <label htmlFor="login" className="hidden md:block text-[11px] text-[#333333] ml-4 typography--family-sf-pro-display">Login</label>
                                 <input
-                                    className="w-full px-3 py-2 border bg-[#f2f2f2] rounded-md shadow-sm"
-                                    type="text"
+                                    className="w-full px-3 py-2 border bg-[#f2f2f2] rounded-md shadow-sm typography--family-robot text-[15px] font-normal"
+                                    type="email"
                                     name="email" id="login"
                                     placeholder="Email"
                                     required
@@ -85,7 +82,7 @@ const LoginForm: React.FC = () => {
                             </section>
 
                             <section className="space-y-2">
-                                <label htmlFor="password" className="hidden md:block text-sm font-medium text-gray-700 ml-4">Password</label>
+                                <label htmlFor="password" className="hidden md:block text-[11px] text-[##333333] ml-4 typography--family-sf-pro-display">Password</label>
                                 <PasswordInput
                                     id="password"
                                     placeholder="Enter password"
@@ -103,18 +100,18 @@ const LoginForm: React.FC = () => {
                                 <Switch checked={rememberMe} onChange={() => setRememberMe(!rememberMe)} />
                                 <label
                                     htmlFor="remember"
-                                    className="text-sm text-gray-700"
+                                    className="text-[12px] text-[#1A1A1A] typography--family-sf-pro-display"
                                     aria-label="Remember me">Remember me</label>
                             </div>
                             <a
                                 href="#"
-                                className="text-sm text-[#007aff] hover:text-[#005eff]"
+                                className="text-sm text-[#007AFF] hover:text-[#005eff] text-[12px] typography--family-sf-pro-display"
                                 aria-label="Forgot password?">Forgot password?</a>
                         </section>
 
                         <button type='submit'
                             className="w-full py-2 px-4 border border-transparent rounded-md shadow-sm 
-                        text-sm font-medium text-white bg-[#007aff] hover:bg-[#005eff] ">
+                        text-[15px] font-bold text-white bg-[#007AFF] hover:bg-[#005eff] typography--family-robot">
                             Sign in
                         </button>
 
@@ -128,16 +125,16 @@ const LoginForm: React.FC = () => {
                         </div>
 
                         <button type="button"
-                            className="flex items-center justify-center w-full py-2 px-4 rounded-md 
-                        shadow-sm text-sm font-medium text-white bg-[#333333] hover:bg-[#1c1c1c]">
+                            className="flex items-center justify-center w-full gap-2 py-2 px-4 rounded-md 
+                        shadow-sm text-[12px] text-white bg-[#333333] hover:bg-[#1c1c1c] typography--family-sf-pro-display">
                             <FcGoogle size={25} /> Or sign in with Google
                         </button>
 
                         <nav className='flex justify-center gap-3 text-sm'>
-                            <p className="text-center  text-gray-600"> Dont have an account? </p>
+                            <p className="text-center text-[#1A1A1A] typography--family-sf-pro-display text-[12px]"> Dont have an account? </p>
                             <a
                                 href="#"
-                                className="font-medium text-[#007aff] hover:text-[#005eff]"
+                                className="font-medium text-[#007AFF] hover:text-[#005eff] typography--family-sf-pro-display text-[12px]"
                                 aria-label="Sign up now">Sign up now</a>
                         </nav>
 

@@ -1,7 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;500;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'SF Pro Display';
+  font-weight: 400;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
 
 /* Main block: custom-bg */
 
@@ -37,11 +49,11 @@
 /* Main block: button */
 
 .button--blue {
-  @apply mt-6 p-2 sm:p-3 sm:px-6 bg-[#072a52] text-white rounded hover:bg-[#0a3d7a] transition-colors duration-300;
+  @apply mt-6 p-2 sm:p-3 sm:px-6 font-medium bg-[#072a52] text-white rounded hover:bg-[#0a3d7a] transition-colors duration-300;
 }
 
 .button--white {
-  @apply mt-6 p-2 sm:p-3 sm:px-6 bg-white text-[#072a52] rounded hover:bg-[#d5d5d5] transition-colors duration-300 font-medium;
+  @apply mt-6 p-2 sm:p-3 sm:px-6 font-medium bg-white text-[#072a52] rounded hover:bg-[#d5d5d5] transition-colors duration-300 font-medium;
 }
 
 /* Main block: divisor-line */
@@ -65,7 +77,7 @@
 /* Main blockl: title */
 
 .title__component {
-  @apply text-3xl sm:text-4xl lg:text-5xl font-bold
+  @apply text-4xl font-bold
 }
 
 /* Main block: simple-animation */
@@ -73,6 +85,50 @@
 .simple-animation__card {
   @apply transform transition-all duration-300 hover:scale-105
 }
+
+/* Block: typography */
+/* Modifier: Poppins font family */
+
+.typography--poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Modifier: Roboto font family */
+
+.typography--family-robot {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Modifier: IBM Plex Sans font family */
+
+.typography--family-ibm-plex-sans {
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+/* Modifier: Open Sans font family */
+
+.typography--family-open-sans {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Modifier: Work Sans font family */
+
+.typography--family-work-sans {
+  font-family: 'Work Sans', sans-serif;
+}
+
+/* Modifier: Lato font family */
+
+.typography--family-lato {
+  font-family: 'Lato', sans-serif;
+}
+
+/* Modifier: SF Pro Display font family */
+
+.typography--family-sf-pro-display {
+  font-family: 'SF Pro Display', sans-serif;
+}
+
 
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */

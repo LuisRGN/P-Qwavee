@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FiArrowUp } from 'react-icons/fi';
 
 const ScrollToTopButton: React.FC = () => {
-    const [isVisible, setIsVisible] = useState(false);
+    const [isVisible, setIsVisible] = useState<boolean>(false);
 
     useEffect(() => {
         const toggleVisibility = () => {

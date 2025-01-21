@@ -23,15 +23,15 @@ const Island: React.FC = () => {
 
                 <div className='flex flex-col sm:items-start items-center py-10 px-6 sm:px-12 lg:px-16 xl:px-28 lg:w-1/2'>
                     <div>
-                        <h2 className="title__component text-[#072a52]">The island</h2>
+                        <h2 className="title__component typography--family-ibm-plex-sans sm:text-[50px] text-[#072a52]">The island</h2>
                         <div className="divisor-line--two"></div>
                     </div>
 
-                    <p className="text-gray-600 text-left w-full">
+                    <p className="text-[#4E4E4E] text-left w-full text-[17px] font-normal typography--family-open-sans">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries
                     </p>
 
-                    <button className="button--blue">
+                    <button className="button--blue typography--family-work-sans text-[14px]">
                         LEARN MORE
                     </button>
                 </div>

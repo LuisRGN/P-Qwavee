@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import Image from 'next/image';
 import { CardItem } from '@/interfaces/Nature';
 import { FaWindowClose } from "react-icons/fa";
+import { fetchNatureData } from '@/utils/fetchNatureData';
 
 const Nature: React.FC = () => {
     const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
@@ -10,37 +11,33 @@ const Nature: React.FC = () => {
     const [itemsNature, setItemsNature] = useState<CardItem[]>([]);
 
     useEffect(() => {
-        const fetchData = async () => {
+        const getData = async () => {
             try {
-                const response = await fetch('https://run.mocky.io/v3/67899179-723c-49ca-a5b9-8781d2bec10a');
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                const data = await response.json();
+                const data = await fetchNatureData();
                 setItemsNature(data);
             } catch (error) {
-                console.error('Fetch error: ', error);
+                console.error('Error fetching nature data: ', error);
             }
         };
 
-        fetchData();
+        getData();
     }, []);
 
-    const handleCardClick = (item: CardItem) => {
+    const handleCardClick: (item: CardItem) => void = (item: CardItem) => {
         setSelectedItem(item);
         setIsModalOpen(true);
     };
 
-    const handleCloseModal = () => {
+    const handleCloseModal: () => void = () => {
         setIsModalOpen(false);
         setSelectedItem(null);
     };
 
     return (
-        <section className="py-16 bg-[#072a52] text-white">
+        <section className="py-16 bg-[#072a52] text-[#FAFBFC]">
             <section className="flex flex-col items-center">
                 <div>
-                    <h3 className="title__component">The Nature</h3>
+                    <h3 className="title__component typography--family-ibm-plex-sans sm:text-[50px]">The Nature</h3>
                     <div className="divisor-line--three"></div>
                 </div>
 
@@ -48,7 +45,7 @@ const Nature: React.FC = () => {
             <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 px-6 sm:px-16 lg:px-32">
                 {itemsNature.map((item, index) => (
                     <article
-                        key={index}
+                        key={`nature-item-${index}`}
                         className="simple-animation__card flex flex-col"
                         onClick={() => handleCardClick(item)}
                     >
@@ -64,8 +61,8 @@ const Nature: React.FC = () => {
                             <figcaption className="sr-only">Nature Landscape</figcaption>
                         </figure>
                         <span className="p-4">
-                            <h4 className="text-xl font-semibold">{item.title}</h4>
-                            <p className="text-gray-300">{item.description}</p>
+                            <h4 className="text-[35.13px] font-bold typography--family-ibm-plex-sans">{item.title}</h4>
+                            <p className="text-gray-300 text-[23.42px] font-bold typography--family-ibm-plex-sans">{item.description}</p>
                         </span>
                     </article>
                 ))}
@@ -88,8 +85,8 @@ const Nature: React.FC = () => {
                                     quality={100}
                                 />
                             </figure>
-                            <h4 className="text-2xl text-gray-700 font-semibold">{selectedItem.title}</h4>
-                            <p className="text-gray-700 mt-2">{selectedItem.description}</p>
+                            <h4 className="text-[35.13px] font-bold typography--family-ibm-plex-sans text-gray-700">{selectedItem.title}</h4>
+                            <p className="text-gray-700 mt-2 text-[23.42px] font-bold typography--family-ibm-plex-sans">{selectedItem.description}</p>
                         </div>
                     </div>
                 </div>

@@ -6,12 +6,12 @@ const Pricing: React.FC = () => {
         <section className="py-16 px-4">
             <section className="flex flex-col items-center">
                 <div>
-                    <h3 className="title__component text-center text-[#072a52]">Pricing</h3>
+                    <h3 className="title__component typography--family-ibm-plex-sans sm:text-[50px] text-center text-[#072a52]">Pricing</h3>
                     <div className="divisor-line--four"></div>
                 </div>
                 <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 px-6 sm:px-16">
                     {[...Array(3)].map((_, index) => (
-                        <article key={index} className="shadow--custom simple-animation__card flex flex-col">
+                        <article key={`pricing-item-${index}`} className="shadow--custom simple-animation__card flex flex-col">
                             <figure className="w-full h-72 relative overflow-hidden">
                                 <Image
                                     src="https://res.cloudinary.com/dtoditltb/image/upload/v1737061497/Cabo_de_Ajo_lighthouse_x27ayb.jpg"
@@ -26,15 +26,15 @@ const Pricing: React.FC = () => {
                                 </figcaption>
                             </figure>
                             <span className="px-4 pt-6 pb-8 flex flex-col text-center gap-6">
-                                <span className='text-gray-300'>Lorem Ipsum is simply dummy text</span>
+                                <span className='text-[#939598] typography--family-robot font-normal text-[13px]'>Lorem Ipsum is simply dummy text</span>
 
-                                <h4 className="text-xl font-bold text-[#072a52]">There are many variationsof passages of Lorem Ipsum Is</h4>
+                                <h4 className="font-bold text-[#072a52] typography--family-ibm-plex-sans text-[21px]">There are many variationsof passages of Lorem Ipsum Is</h4>
 
-                                <p className="text-[#4e4e4e]">Lorem Ipsum is simply dummy text of the pri-nting and typesetting industry.
+                                <p className="text-[#4e4e4e] typography--family-open-sans font-normal text-[15px]">Lorem Ipsum is simply dummy text of the pri-nting and typesetting industry.
                                     Lorem Ipsumstandard dummy.</p>
                                 <div className='flex flex-col gap-1'>
-                                    <h5 className='text-[#072a52] font-bold'>From a Lorem</h5>
-                                    <div className='border-b-[3px] border-[#ededf1] w-24 mx-auto'></div>
+                                    <h5 className='text-[#072a52] font-bold typography--family-ibm-plex-sans text-[16px]'>From a Lorem</h5>
+                                    <div className='border-b-[3px] border-[#EDEDF1] w-24 mx-auto'></div>
                                 </div>
                             </span>
                         </article>
@@ -42,7 +42,7 @@ const Pricing: React.FC = () => {
                 </section>
 
                 <section className='flex justify-center mt-14 gap-3'>
-                    <button className="button--blue">FIND MORE</button>
+                    <button className="button--blue typography--family-work-sans text-[14px]">FIND MORE</button>
                 </section>
             </section>
         </section>

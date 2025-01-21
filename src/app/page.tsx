@@ -1,7 +1,9 @@
 import Login from "@/app/Login/page";
 
-export default function Home() {
+const Home: React.FC = () => {
   return (
     <Login />
   );
 }
+
+export default Home;

@@ -14,7 +14,7 @@ const FooterLogged: React.FC = () => {
                     <a href="https://www.instagram.com/qwavee/" target="_blank"><FaInstagram className='text-[#072a52]' /></a>
                     <a href="https://www.linkedin.com/company/qwavee/" target="_blank"><FaLinkedinIn className='text-[#072a52]' /></a>
                 </div>
-                <p className="mt-4 text-[#072a52]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
+                <p className="mt-4 text-[#072a52] typography--family-lato font-medium text-[16px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
             </section>
         </footer>
     );
