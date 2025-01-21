@@ -10,11 +10,34 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
 
     const handleLogout = () => {
-        localStorage.removeItem('isLoggedIn');
-        localStorage.removeItem('userEmail');
-        setIsLoggedIn(false);
-        router.push('/');
+        import('sweetalert2').then(Swal => {
+            Swal.default
+                .fire({
+                    title: 'Are you sure?',
+                    text: 'You are about to log out',
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes, log out',
+                    cancelButtonText: 'Cancel',
+                })
+                .then((result) => {
+                    if (result.isConfirmed) {
+                        localStorage.removeItem('isLoggedIn');
+                        localStorage.removeItem('userEmail');
+                        setIsLoggedIn(false);
+                        router.push('/');
+                        Swal.default.fire(
+                            'You are offline!',
+                            'Your session has been closed successfully.',
+                            'success'
+                        );
+                    }
+                });
+        });
     };
+
 
     return (
         <AuthContext.Provider value={{ isLoggedIn, handleLogout }}>
