@@ -53,6 +53,10 @@ Para clonar e instalar el proyecto, sigue estos pasos:
       
       react-player: Utilizada para insertar un reproductor de video en la aplicación.
 
+      sweetalert2: Implementada para mostrar alertas modernas y personalizadas con una mejor UI.
+
+      framer-motion: Utilizada exclusivamente para implementar una pantalla de carga animada en el componente loading.
+
 ## Integración con Mocky
 
    Este proyecto simula un sistema de login y obtiene datos para las cards de un componente utilizando una API simulada proporcionada por Mocky.
